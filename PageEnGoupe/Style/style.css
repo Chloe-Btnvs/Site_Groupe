@@ -1,0 +1,33 @@
+*{
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+h1{
+    color: red;
+}
+a{
+    color: crimson;
+}
+main{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+#contenuJeu{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+.sectionDeJeu{
+    color: rgb(0, 0, 255);
+    background-image: url(../Images/CapsulePrincipal1.png);
+}
+.description{
+    color: red;
+}
