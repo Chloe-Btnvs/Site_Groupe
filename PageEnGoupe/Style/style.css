@@ -1,3 +1,20 @@
+/* key frames */
+
+@keyframes neonBlink {
+    0% {
+    text-shadow:
+      0 0 20px rgba(153, 0, 255, 0.5),
+      0 0 80px rgba(153, 0, 255, 0.5);
+    }
+    100% {
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 1),
+      0 0 10px rgb(0, 20, 255),
+    }
+}
+
+/* style */
+
 *{
     background-color: black;
     margin: 0px;
@@ -9,7 +26,16 @@ header{
     padding-top: 2rem;
 }
 h1{
-    color: red;
+    color: white;
+    padding: 2rem;
+    font-size: 8vh;
+    text-shadow: 
+        0 0 5px white, 
+        0 0 10px white,  
+        0 0 20px white,
+        0 0 40px rgb(0, 20, 255), 
+        0 0 80px rgb(0, 20, 255);
+        animation: neonBlink 0.4s ease-in-out infinite alternate;
 }
 a{
     color: crimson;
@@ -22,12 +48,47 @@ main{
 #contenuJeu{
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    margin: 2rem;
+    gap: 0.5rem;
 }
-.sectionDeJeu{
-    color: rgb(0, 0, 255);
+
+/* section de jeu */
+
+.sectionDeJeu1, .sectionDeJeu2, .sectionDeJeu3{
+    display: flex;
+    height: 45rem;
+    padding: 4rem;
+    align-items: end;
+    color: white;
+    font-size: 3rem;
     background-image: url(../Images/CapsulePrincipal1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: cover;
 }
+.sectionDeJeu1:hover, .sectionDeJeu2:hover, .sectionDeJeu3:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+.sectionDeJeu1:not(:hover), .sectionDeJeu2:not(:hover), .sectionDeJeu3:not(:hover){
+    transition: 0.5s;
+}
+
+/* section de jeu ^ */
+
 .description{
     color: red;
+}
+p{
+    padding: 10px;
+}
+.img-lien{
+    color: red;
+    
+}
+img{
+    display: flex;
+    padding: 4rem;
+    align-items: end;
+    height: 300px;
 }
