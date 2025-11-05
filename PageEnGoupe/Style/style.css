@@ -54,24 +54,33 @@ main{
 
 /* section de jeu */
 
-.sectionDeJeu1, .sectionDeJeu2, .sectionDeJeu3{
+.sectionDeJeu{
     display: flex;
     height: 45rem;
     padding: 4rem;
     align-items: end;
     color: white;
     font-size: 3rem;
-    background-image: url(../Images/CapsulePrincipal1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-color: cover;
 }
-.sectionDeJeu1:hover, .sectionDeJeu2:hover, .sectionDeJeu3:hover{
+.sectionDeJeu:hover{
     transform: scale(1.05);
     transition: 0.5s;
 }
-.sectionDeJeu1:not(:hover), .sectionDeJeu2:not(:hover), .sectionDeJeu3:not(:hover){
+.sectionDeJeu:not(:hover){
     transition: 0.5s;
+}
+
+#Capsule1{
+    background-image: url(../Images/CapsulePrincipal1.png);
+}
+#Capsule2{
+    background-image: url(../Images/CapsulePrincipal1.png);
+}
+#Capsule3{
+    background-image: url(../Images/CapsulePrincipal1.png);
 }
 
 /* section de jeu ^ */
