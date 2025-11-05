@@ -1,3 +1,14 @@
+/* Font */
+
+@font-face {
+    font-family: 'LITTLE NIGHTMARE';
+    src: url('../Font/LittleNightmareFont/LITTLENIGHTMARERegular.woff2') format('woff2'),
+        url('../Font/LittleNightmareFont/LITTLENIGHTMARERegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* key frames */
 
 @keyframes neonBlink {
@@ -13,32 +24,44 @@
     }
 }
 
+/* Image deplacable */
+
+#MovableImage{
+    position: relative;
+    cursor: grab;
+    height: 15rem;
+}
+
 /* style */
 
-*{
-    background-color: black;
+body{
+    background-color: rgb(0, 0, 0);
     margin: 0px;
     padding: 0px;
+    height: 100%;
+    width: 100%;
 }
+
 header{
     display: flex;
     justify-content: center;
-    padding-top: 2rem;
+    align-items: center;
+    background-color: grey;
+    border-radius: 2rem;
 }
 h1{
+    white-space: nowrap;
     color: white;
     padding: 2rem;
-    font-size: 8vh;
+    font-size: 10vh;
+    font-family: 'LITTLE NIGHTMARE';
     text-shadow: 
         0 0 5px white, 
         0 0 10px white,  
         0 0 20px white,
         0 0 40px rgb(0, 20, 255), 
         0 0 80px rgb(0, 20, 255);
-        animation: neonBlink 0.4s ease-in-out infinite alternate;
-}
-a{
-    color: crimson;
+        animation: neonBlink 1s ease-in-out infinite alternate;
 }
 main{
     display: flex;
@@ -56,11 +79,13 @@ main{
 
 .sectionDeJeu{
     display: flex;
+    box-shadow: 0.2rem 0.2rem 0.6rem grey;
     height: 45rem;
     padding: 4rem;
     align-items: end;
     color: white;
     font-size: 3rem;
+    border-radius: 2rem;
     background-position: center;
     background-repeat: no-repeat;
     background-color: cover;
@@ -77,27 +102,69 @@ main{
     background-image: url(../Images/CapsulePrincipal1.png);
 }
 #Capsule2{
-    background-image: url(../Images/CapsulePrincipal1.png);
+    background-image: url(../Images/CapsulePrincipal2.jpg);
+    background-size: 450%;
 }
 #Capsule3{
-    background-image: url(../Images/CapsulePrincipal1.png);
+    background-image: url(../Images/CapsulePrincipal3.jpg);
+    background-size: 450%;
+}
+.liens{
+    display: flex;
+    justify-content: center;
+    background-color: blue;
 }
 
 /* section de jeu ^ */
 
 .description{
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
     color: red;
+    /*Couleur de fond à determiner */
 }
 p{
     padding: 10px;
 }
-.img-lien{
+.images{
     color: red;
-    
+    /*Couleur de fond à determiner */
 }
 img{
+    height: 280px;
+}
+.image-container{
     display: flex;
-    padding: 4rem;
-    align-items: end;
-    height: 300px;
+    gap: 10px;
+}
+.logo{
+    height: 80px;
+}
+.link{
+    border-radius: 50px;
+    background: #6e6e6e;/*Couleur de fond à determiner */
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+.link:hover{
+    color: black;
+    transition: all 0.3s ease;
+    background: #6e6e6e;
+    text-decoration: underline;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+article{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+.liens{
+    background: #6e6e6e;/*Couleur de fond à determiner */
 }
