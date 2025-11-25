@@ -1,3 +1,22 @@
+@media(max-width: 1100px){
+    .sectionDeJeu{
+        width: 150px;
+    }
+}
+@media(max-width: 850px){
+    .sectionDeJeu{
+        width: 80px;
+    }
+    #Capsule1{
+        background-size: 500%;
+    }
+}
+@media(max-width: 750px){
+    .sectionDeJeu{
+        width: 20px;
+    }
+}
+
 /* Font */
 
 @font-face {
@@ -37,15 +56,9 @@
 
 body{
     background-image: url(../Images/LittleNightmareBackground.jpg);
-    background-repeat: no-repeat;
-    background-size: 500vh;
     background-position: center;
     margin: 0px;
     padding: 0px;
-    height: 100%;
-    width: 100%;
-    min-height: 100vh;
-    min-width: 50vh;
 }
 header{
     display: flex;
@@ -63,6 +76,7 @@ main{
     display: flex;
     justify-content: center;
     padding-top: 2rem;
+    width: auto;
     padding-bottom: 1.5rem;
 }
 #contenuJeu{
@@ -86,14 +100,15 @@ footer{
 .sectionDeJeu{
     display: flex;
     box-shadow: 0.2rem 0.2rem 0.6rem grey;
-    height: 55rem;
+    height: 75vh;
     padding: 4rem;
     align-items: end;
     color: white;
+    flex-wrap: wrap;
     font-family: 'LITTLE NIGHTMARE';
     font-weight: bold;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 6vh;
     border-radius: 2rem;
     background-position: center;
     background-repeat: no-repeat;
@@ -105,19 +120,31 @@ footer{
     cursor: grab;
     box-shadow: none;
 }
-.sectionDeJeu:not(:hover){
+.sectionBonus:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    box-shadow: none;
+}
+.sectionDeJeu:not(:hover), .sectionBonus:not(:hover){
     transition: 0.5s;
 }
+
+
+/*
 .sectionBonus{
     display: flex;
     box-shadow: 0.2rem 0.2rem 0.6rem grey;
-    height: 55rem;
-    padding: 0px;
+    height: 65vh;
     align-items: end;
     color: white;
     font-size: 2rem;
     border-radius: 2rem;
 }
+#bonusID{
+    margin-right: 4rem;
+    margin-left: 4rem;
+}
+*/
 
 #Capsule1{
     background-image: url(../Images/CapsulePrincipal1.png);
@@ -141,8 +168,13 @@ footer{
 .logo{
     height: 80px;
 }
+.logo:hover{
+    transition: 0.3s ease;
+    transform: scale(1.07);
+}
 img{
     height: 280px;
+    border-radius: 20px;
 }
 .image-container{
     display: flex;
@@ -150,13 +182,23 @@ img{
     align-items: center;
     gap: 10px;
 }
+.image-container-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+}
+.trailer{
+    border-radius: 20px;
+    box-shadow: 0.2rem 0.2rem 0.6rem black;
+}
 
     /* Images ^ */
 
     /* Textes */
     
 h1{
-    white-space: nowrap;
     color: white;
     padding: 2rem;
     font-size: 10vh;
@@ -205,14 +247,14 @@ p{
 
 .linkContaint{
     border-radius: 2rem;
-    background: #6e6e6e;/*Couleur de fond à determiner */
+    background: #6e6e6e;
     padding: 10px 20px;
     text-decoration: none;
     color: white;
 }
 .link{
     border-radius: 50px;
-    background: #6e6e6e;/*Couleur de fond à determiner */
+    background: #6e6e6e;
     padding: 10px 20px;
     text-decoration: none;
     color: white;
@@ -238,5 +280,20 @@ p{
     color: azure;
 }
 .game-link:not(:hover){
+    transition: all 0.1s ease;
+}
+.link-arriere{
+    border-radius: 50px;
+    background:  #253d3d;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #090f0f;
+}
+.link-arriere:hover{
+    background-color: #1a2b2b;
+    color: darkslategray;
+    transition: all 0.3s ease;
+}
+.link-arriere:not(:hover){
     transition: all 0.1s ease;
 }
