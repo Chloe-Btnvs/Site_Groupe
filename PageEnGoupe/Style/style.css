@@ -209,7 +209,7 @@ footer{
         img{
             height: 280px;
             border-radius: 20px;
-            border: 2px solid white;
+            border: 3px solid white;
         }
         .Eye, .image-personnages, .LogoStable, .ImageRotation{
             border: 0px solid;
