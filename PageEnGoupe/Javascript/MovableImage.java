@@ -23,3 +23,8 @@ document.addEventListener('mouseup', () => {
     isDragging = false;
     image.style.cursor = 'grab';
 });
+
+
+
+
+

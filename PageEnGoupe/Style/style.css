@@ -1,45 +1,75 @@
+
+/* Medias queries */
+
 @media(max-width: 1100px){
     .sectionDeJeu{
         width: 150px;
+    }
+    #Capsule1, #Capsule2, #Capsule3{
+        font-size: 3rem;
     }
 }
 @media(max-width: 850px){
     .sectionDeJeu{
         width: 80px;
     }
-    #Capsule1{
-        background-size: 500%;
+    #Capsule1, #Capsule2, #Capsule3{
+        font-size: 2rem;
+    }
+    .titre{
+        height: 40px;
+        font-size: 4.5rem;
+        display: flex;
+        align-items: center;
+    }
+    body{
+        height: 20vw;
     }
 }
 @media(max-width: 750px){
     .sectionDeJeu{
         width: 20px;
     }
+    #Capsule1, #Capsule2, #Capsule3{
+        font-size: 1.5rem;
+    }
+    .LogoStable{
+        height: 12rem;
+    }
+    .titre{
+        height: 20px;
+        font-size: 2.8rem;
+        display: flex;
+        align-items: center;
+    }
 }
+
+/* Medias queries ^ */
 
 /* Font */
 
 @font-face {
-    font-family: 'LITTLE NIGHTMARE';
-    src: url('../Font/LITTLENIGHTMARERegular.woff2') format('woff2'),
-        url('Font/LITTLENIGHTMARERegular.woff') format('woff');
+    font-family: '#';
+    src: url('#') format('woff2'),
+        url('#') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
+
+/* Font ^ */
 
 /* key frames */
 
 @keyframes neonBlink {
     0% {
     text-shadow:
-      0 0 20px rgba(153, 0, 255, 0.5),
-      0 0 80px rgba(153, 0, 255, 0.5);
+      0 0 20px black,
+      0 0 80px black;
     }
     100% {
     text-shadow:
-      0 0 5px rgba(255, 255, 255, 1),
-      0 0 10px rgb(0, 20, 255),
+      0 0 5px black,
+      0 0 10px black,
     }
 }
 
@@ -52,20 +82,44 @@
     }
 }
 
+/* key frames ^ */
+
+/* Page */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    color: #820e0e;
+}
+
+/* Page ^ */
+
+/* Rotation */
+
+.ImageRotation{
+    animation: spin 20s linear infinite;
+}
+.ContenuDeRotation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Rotation ^ */
+
 /* style */
 
 body{
     background-image: url(../Images/LittleNightmareBackground.jpg);
     background-position: center;
-    margin: 0px;
-    padding: 0px;
 }
 header{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: darkslategray;
-    border-radius: 2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 article{
     text-align: center;
@@ -92,147 +146,116 @@ footer{
     gap: 1rem;
     height: 10vh;
     background-color: darkslategray;
-    border-radius: 2rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    color: black;
 }
 
-/* section de jeu */
+    /* section de jeu */
 
-.sectionDeJeu{
-    display: flex;
-    box-shadow: 0.2rem 0.2rem 0.6rem grey;
-    height: 75vh;
-    padding: 4rem;
-    align-items: end;
-    color: white;
-    flex-wrap: wrap;
-    font-family: 'LITTLE NIGHTMARE';
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 6vh;
-    border-radius: 2rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: cover;
-}
-.sectionDeJeu:hover{
-    transform: scale(1.05);
-    transition: 0.5s;
-    cursor: grab;
-    box-shadow: none;
-}
-.sectionBonus:hover{
-    transform: scale(1.05);
-    transition: 0.5s;
-    box-shadow: none;
-}
-.sectionDeJeu:not(:hover), .sectionBonus:not(:hover){
-    transition: 0.5s;
-}
+    .sectionDeJeu{
+        box-shadow: 0.2rem 0.2rem 0.6rem grey;
+        height: 75vh;
+        padding: 4rem;
+        align-items: end;
+        color: white;
+        flex-wrap: wrap;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 6vh;
+        border-radius: 2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: cover;
+    }
+    .sectionDeJeu:hover{
+        transform: scale(1.05);
+        transition: 0.5s;
+        cursor: grab;
+        box-shadow: none;
+    }
+    .sectionDeJeu:not(:hover){
+        transition: 0.5s;
+    }
+    #Capsule1{
+        background-image: url(../Images/CapsulePrincipal1.png);
+    }
+    #Capsule2{
+        background-image: url(../Images/CapsulePrincipal2.jpg);
+    }
+    #Capsule3{
+        background-image: url(../Images/CapsulePrincipal3.jpg);
+    }
+    #Capsule1, #Capsule2, #Capsule3{
+        display: flex;
+        justify-content: center;
+        background-repeat: repeat;
+    }
 
+    /* section de jeu ^ */
 
-/*
-.sectionBonus{
-    display: flex;
-    box-shadow: 0.2rem 0.2rem 0.6rem grey;
-    height: 65vh;
-    align-items: end;
-    color: white;
-    font-size: 2rem;
-    border-radius: 2rem;
-}
-#bonusID{
-    margin-right: 4rem;
-    margin-left: 4rem;
-}
-*/
+    /* Contenu pages */ 
 
-#Capsule1{
-    background-image: url(../Images/CapsulePrincipal1.png);
-    background-size: 200%;
-}
-#Capsule2{
-    background-image: url(../Images/CapsulePrincipal2.jpg);
-    background-size: 600%;
-}
-#Capsule3{
-    background-image: url(../Images/CapsulePrincipal3.jpg);
-    background-size: 600%;
-}
+        /* Images */
 
-/* section de jeu ^ */
+        .logo{
+            height: 80px;
+            border: 0px;
+        }
+        .logo:hover{
+            transition: 0.3s ease;
+            transform: scale(1.07);
+        }
+        img{
+            height: 280px;
+            border-radius: 20px;
+            border: 2px solid white;
+        }
+        .Eye, .image-personnages, .LogoStable, .ImageRotation{
+            border: 0px solid;
+        }
+        .image-container, .image-container-game{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .image-container-game{
+            border-radius: 50px;
+        }
+        .cover-fit {
+            object-fit: cover;
+            width: 280px;
+            height: 280px;
+        }
+        .trailer{
+            border-radius: 20px;
+            box-shadow: 0.2rem 0.2rem 0.6rem black;
+        }
 
-/* Contenu pages */ 
+        /* Images ^ */
 
-    /* Images */
-
-.logo{
-    height: 80px;
-}
-.logo:hover{
-    transition: 0.3s ease;
-    transform: scale(1.07);
-}
-img{
-    height: 280px;
-    border-radius: 20px;
-}
-.image-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.image-container-game{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 50px;
-}
-.trailer{
-    border-radius: 20px;
-    box-shadow: 0.2rem 0.2rem 0.6rem black;
-}
-
-    /* Images ^ */
-
-    /* Textes */
+        /* Textes */
     
-h1{
-    color: white;
-    padding: 2rem;
-    font-size: 10vh;
-    font-family: 'LITTLE NIGHTMARE';
-    text-shadow: 
-        0 0 5px white, 
-        0 0 10px white,  
-        0 0 20px white,
-        0 0 40px rgb(0, 20, 255), 
-        0 0 80px rgb(0, 20, 255);
-        animation: neonBlink 1s ease-in-out infinite alternate;
-}
-.personnages{
-    background-color: hsla(200, 80%, 85%, .3);
-    border-radius: 50px;
-}
-p{
-    color: #820e0e;
-}
+        h1{
+            display: flex;
+            color: white;
+            font-size: 10vh;
+            text-shadow: 
+                0 0 5px white, 
+                0 0 10px white,  
+                0 0 20px white,
+                0 0 40px black, 
+                0 0 80px black;
+                animation: neonBlink 0.8s ease-in-out infinite alternate;
+        }
+        .personnages{
+            background-color: hsla(200, 80%, 85%, .3);
+            border-radius: 50px;
+        }
 
     /* Textes ^ */
 
-    /* Rotation */
-
-.ImageRotation{
-    animation: spin 20s linear infinite;
-}
-.ContenuDeRotation{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-    /* Rotation ^ */
 
 
 
@@ -244,7 +267,6 @@ p{
     color: #820e0e;
     background-color: hsla(200, 80%, 85%, .3);
 }
-
 .linkContaint{
     border-radius: 2rem;
     background: #6e6e6e;
@@ -254,18 +276,14 @@ p{
 }
 .link{
     border-radius: 50px;
-    background: #6e6e6e;
+    background: #616161;
     padding: 10px 20px;
-    text-decoration: none;
     color: white;
 }
 .link:hover{
     background-color: #454545;
     color: gray;
     transition: all 0.3s ease;
-}
-.link:not(:hover){
-    transition: all 0.1s ease;
 }
 .game-link{
     border-radius: 10px;
@@ -277,23 +295,22 @@ p{
 .game-link:hover{
     transition: all 0.3s ease;
     background: black;
-    color: azure;
-}
-.game-link:not(:hover){
-    transition: all 0.1s ease;
+    color: white;
 }
 .link-arriere{
     border-radius: 50px;
     background:  #253d3d;
     padding: 10px 20px;
-    text-decoration: none;
     color: #090f0f;
+}
+.link-arriere, .link{
+    text-decoration: none;
 }
 .link-arriere:hover{
     background-color: #1a2b2b;
     color: darkslategray;
     transition: all 0.3s ease;
 }
-.link-arriere:not(:hover){
+.link-arriere:not(:hover), .game-link:not(:hover), .link:not(:hover){
     transition: all 0.1s ease;
 }
