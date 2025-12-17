@@ -145,11 +145,10 @@ body{
     animation-timeline: scroll();
 }
 .Banniere-image{
+    width: 0 auto;
+    background-image: url(../Images/Banner.jpg);
     background-position: center;
     animation: moveBackground 10s linear infinite;
-}
-.imageBann{
-    background-image: url(../Images/Banner.jpg);
 }
 header{
     display: flex;
