@@ -82,6 +82,22 @@
     }
 }
 
+@keyframes moveBackground {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+
+}
+
 /* key frames ^ */
 
 /* Page */
@@ -90,6 +106,7 @@
     padding: 0px;
     margin: 0px;
     color: #820e0e;
+    box-sizing: border-box;
 }
 
 /* Page ^ */
@@ -112,14 +129,20 @@
 body{
     background-image: url(../Images/LittleNightmareBackground.jpg);
     background-position: center;
+    min-height: 100vh;
+}
+.Banniere-image{
+    background-image: url(../Images/Banner.jpg);
+    width: 200vw;
+    animation: moveBackground 15s linear infinite;
 }
 header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darkslategray;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    height: 25vh;
 }
 article{
     text-align: center;
@@ -149,6 +172,7 @@ footer{
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     color: black;
+    border-top: 2px solid #162424;
 }
 
     /* section de jeu */
@@ -252,6 +276,11 @@ footer{
         .personnages{
             background-color: hsla(200, 80%, 85%, .3);
             border-radius: 50px;
+        }
+        p{
+            background: linear-gradient(to bottom, red, rgb(123, 0, 0), black);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
     /* Textes ^ */
