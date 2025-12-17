@@ -186,7 +186,7 @@ footer{
     background-color: darkslategray;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    color: black;
+    color: #111c1c;
     border-top: 2px solid #162424;
 }
 
@@ -247,7 +247,7 @@ footer{
             transform: scale(1.07);
         }
         img{
-            height: 280px;
+            height: 30vh;
             border-radius: 20px;
             border: 3px solid white;
         }
@@ -265,19 +265,38 @@ footer{
         }
         .cover-fit {
             object-fit: cover;
-            width: 280px;
-            height: 280px;
+            width: 30vh;
+            height: 30vh;
         }
         .trailer{
             border-radius: 20px;
+            height: 55vh;
             box-shadow: 0.2rem 0.2rem 0.6rem black;
         }
-        .imageReanimal{
+        .ContenuReanimal{
             display: flex;
             justify-content: center;
+            align-items: center;
+            gap: 40px;
             width: auto;
-            height: 40vh;
-            background-color: red;
+            height: auto;
+            margin: 2rem;
+            text-decoration: underline;
+            flex-direction: column;
+        }
+        .imageRenimal{
+            display: flex;
+            width: 88vw;
+            height: auto;
+            border: none;
+            box-shadow: 0.2rem 0.2rem 0.6rem grey;
+        }
+        .imageRenimal:hover{
+            transform: scale(1.05);
+            transition: 0.5s;
+        }
+        .imageRenimal:not(:hover){
+            transition: 0.5s;
         }
 
         /* Images ^ */
@@ -302,6 +321,7 @@ footer{
         }
         p{
             background: linear-gradient(to bottom, red, rgb(123, 0, 0), black);
+            background-clip: border-box;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
