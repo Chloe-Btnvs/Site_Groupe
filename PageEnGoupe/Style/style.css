@@ -83,19 +83,21 @@
 }
 
 @keyframes moveBackground {
-    0% {
-        transform: translateX(100vw);
+    from {
+    background-position: 25% 0%;
     }
-    100% {
-        transform: translateX(-100vw);
+    to {
+    background-position: 25% 50%;
     }
-    0% {
-        transform: translateX(-100vw);
-    }
-    100% {
-        transform: translateX(100vw);
-    }
+}
 
+@keyframes moveBackgroundImage{
+    from {
+        background-position: 50% 0%;
+    }
+    to {
+        background-position: 50% 100%;
+    }
 }
 
 /* key frames ^ */
@@ -130,10 +132,14 @@ body{
     background-image: url(../Images/LittleNightmareBackground.jpg);
     background-position: center;
     min-height: 100vh;
+    animation: linear moveBackgroundImage;
+    animation-duration: auto;
+    animation-timeline: scroll();
 }
 .Banniere-image{
     background-image: url(../Images/Banner.jpg);
-    width: 200vw;
+    background-position: center;
+    width: 0 auto;
     animation: moveBackground 15s linear infinite;
 }
 header{
