@@ -1,15 +1,23 @@
 
 /* Medias queries */
 
-@media(max-width: 1100px){
+@media(max-width: 1200px){
     .sectionDeJeu{
-        width: 150px;
+        width: 300px;
     }
     #Capsule1, #Capsule2, #Capsule3{
         font-size: 3rem;
     }
 }
-@media(max-width: 850px){
+@media(max-width: 1000px){
+    .sectionDeJeu{
+        width: 250px;
+    }
+    #Capsule1, #Capsule2, #Capsule3{
+        font-size: 3rem;
+    }
+}
+@media(max-width: 500px){
     .sectionDeJeu{
         width: 80px;
     }
@@ -26,7 +34,7 @@
         height: 20vw;
     }
 }
-@media(max-width: 750px){
+@media(max-width: 600px){
     .sectionDeJeu{
         width: 20px;
     }
@@ -84,19 +92,19 @@
 
 @keyframes moveBackground {
     from {
-    background-position: 25% 0%;
+        transform: translateX(0) 
     }
-    to {
-    background-position: 25% 50%;
+	to {
+        transform: translateX(calc(0px - 50% - 50px))
     }
 }
 
 @keyframes moveBackgroundImage{
     from {
-        background-position: 50% 0%;
+        background-position: 0vw 0vw;
     }
     to {
-        background-position: 50% 100%;
+        background-position: 0% 100%;
     }
 }
 
@@ -137,10 +145,11 @@ body{
     animation-timeline: scroll();
 }
 .Banniere-image{
-    background-image: url(../Images/Banner.jpg);
     background-position: center;
-    width: 0 auto;
-    animation: moveBackground 15s linear infinite;
+    animation: moveBackground 10s linear infinite;
+}
+.imageBann{
+    background-image: url(../Images/Banner.jpg);
 }
 header{
     display: flex;
@@ -221,6 +230,7 @@ footer{
         justify-content: center;
         background-repeat: repeat;
     }
+    
 
     /* section de jeu ^ */
 
