@@ -148,7 +148,6 @@ body{
     width: 0 auto;
     background-image: url(../Images/Banner.jpg);
     background-position: center;
-    animation: moveBackground 10s linear infinite;
 }
 header{
     display: flex;
@@ -165,10 +164,12 @@ article{
 }
 main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding-top: 2rem;
     width: auto;
     padding-bottom: 1.5rem;
+    max-width: 100vw;
 }
 #contenuJeu{
     display: flex;
@@ -270,6 +271,13 @@ footer{
         .trailer{
             border-radius: 20px;
             box-shadow: 0.2rem 0.2rem 0.6rem black;
+        }
+        .imageReanimal{
+            display: flex;
+            justify-content: center;
+            width: auto;
+            height: 40vh;
+            background-color: red;
         }
 
         /* Images ^ */
